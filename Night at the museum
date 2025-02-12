@@ -1,0 +1,13 @@
+def solve():
+    s = input()
+    current = 'a'
+    total_rotations = 0
+    
+    for char in s:
+        diff = abs(ord(char) - ord(current))
+        total_rotations += min(diff, 26 - diff)
+        current = char
+        
+    print(total_rotations)
+
+solve()
