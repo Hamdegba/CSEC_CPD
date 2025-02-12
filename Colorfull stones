@@ -1,0 +1,23 @@
+def solve():
+    s = input()
+    t = input()
+    
+    current_position = 0
+    
+    for instruction in t:
+        if instruction == 'R':
+            if s[current_position] == 'R':
+                current_position += 1
+        elif instruction == 'G':
+            if s[current_position] == 'G':
+                current_position += 1
+        elif instruction == 'B':
+            if s[current_position] == 'B':
+                current_position += 1
+        
+        if current_position == len(s):
+            break  # Prevent index out of range error
+            
+    print(current_position + 1)  # 1-based index
+
+solve()
