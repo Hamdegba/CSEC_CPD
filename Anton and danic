@@ -1,1 +1,18 @@
 
+def determine_winner(n, results):
+    anton_wins = results.count('A')
+    danik_wins = results.count('D')
+    
+    if anton_wins > danik_wins:
+        return "Anton"
+    elif danik_wins > anton_wins:
+        return "Danik"
+    else:
+        return "Friendship"
+
+# Reading input
+n = int(input())
+results = input().strip()
+
+# Calling the function and printing the result
+print(determine_winner(n, results))
